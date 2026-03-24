@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!-- Google Fonts (opcional para elegância) -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -23,7 +23,6 @@
         main {
             flex: 1;
         }
-        /* navbar personalizada com tons terrosos */
         .navbar-brand {
             font-weight: 700;
             letter-spacing: -0.5px;
@@ -44,7 +43,6 @@
             background-color: #faeedf;
             border-radius: 30px;
         }
-        /* Hero / cabeçalho */
         .hero-section {
             background: linear-gradient(105deg, #f8ede3 0%, #faf0e8 100%);
             border-radius: 0 0 2rem 2rem;
@@ -146,14 +144,32 @@
                 font-size: 2rem;
             }
         }
+        /* Toast de feedback opcional */
+        .toast-custom {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+            background: #2c241e;
+            color: #e6bc9a;
+            border-radius: 12px;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+        }
+        .toast-custom.show {
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
 
-<!-- ========================= MENU SIMPLES + RODAPÉ DINÂMICO ========================= -->
+<!-- ========================= MENU SIMPLES ========================= -->
 <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="#" data-page="home">
             <i class="bi bi-scissors"></i> Tapecaria Santa Angela
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
@@ -162,13 +178,13 @@
         <div class="collapse navbar-collapse" id="navbarMain">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html"><i class="bi bi-house-door"></i> Home</a>
+                    <a class="nav-link" href="#" data-page="home"><i class="bi bi-house-door"></i> Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="politica-privacidade.html"><i class="bi bi-shield-lock"></i> Política de Privacidade</a>
+                    <a class="nav-link" href="#" data-page="politica"><i class="bi bi-shield-lock"></i> Política de Privacidade</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="termos-uso.html"><i class="bi bi-file-text"></i> Termos de Uso</a>
+                    <a class="nav-link" href="#" data-page="termos"><i class="bi bi-file-text"></i> Termos de Uso</a>
                 </li>
             </ul>
         </div>
@@ -177,7 +193,7 @@
 
 <main>
     <!-- =================== PÁGINA HOME =================== -->
-    <div id="homePage">
+    <div id="homePage" class="page-content">
         <!-- Hero / Apresentação -->
         <div class="hero-section">
             <div class="container">
@@ -185,7 +201,7 @@
                     <div class="col-lg-7">
                         <h1 class="hero-title">Tapecaria Santa Angela<br>Arte que reveste seu lar</h1>
                         <p class="lead hero-sub mt-3">Especialistas em estofados, tapeçaria personalizada e restauração com acabamento impecável há mais de 5 anos.</p>
-                        <a href="#contato" class="btn btn-cta mt-3"><i class="bi bi-whatsapp"></i> Fale conosco</a>
+                        <a href="#" class="btn btn-cta mt-3" data-scroll-to="contato"><i class="bi bi-whatsapp"></i> Fale conosco</a>
                     </div>
                     <div class="col-lg-5 text-center">
                         <i class="bi bi-couch" style="font-size: 8rem; color: #c27e44; opacity: 0.8;"></i>
@@ -265,7 +281,7 @@
                 </div>
             </div>
 
-            <!-- Mapa ilustrativo / localização fake simples com ícone -->
+            <!-- Mapa ilustrativo / localização -->
             <div class="row">
                 <div class="col-12">
                     <div class="bg-light rounded-4 p-4 text-center">
@@ -279,9 +295,8 @@
         </div>
     </div>
 
-    <!-- =================== PÁGINA POLÍTICA DE PRIVACIDADE (conteúdo oculto via JS? mas farei inline via HTML puro - 3 páginas separadas? O pedido: 3 páginas: home, política e termos. Vamos construir um site com navegação em páginas distintas (cada arquivo). Porém como pediu "uma pagina só index", posso simular com hash ou usar divs? O ideal: criar um site de página única (SPA) com conteúdo trocado via JS? Mas a instrução é clara: "Criar 3 páginas: Home, Política de Privacidade e Termos de Uso." Então farei um sistema com três seções que aparecem conforme o clique, sem recarregar (single page application simples), mantendo todas as informações da empresa em cada visualização e rodapé fixo. Dessa forma é uma única página index.html mas com comportamento de 3 páginas. Atende perfeitamente.</p>
-    -->
-    <div id="politicaPage" style="display: none;">
+    <!-- =================== PÁGINA POLÍTICA DE PRIVACIDADE =================== -->
+    <div id="politicaPage" class="page-content" style="display: none;">
         <div class="page-header">
             <div class="container">
                 <h2 class="fw-bold"><i class="bi bi-shield-lock"></i> Política de Privacidade</h2>
@@ -305,7 +320,7 @@
     </div>
 
     <!-- =================== TERMOS DE USO =================== -->
-    <div id="termosPage" style="display: none;">
+    <div id="termosPage" class="page-content" style="display: none;">
         <div class="page-header">
             <div class="container">
                 <h2 class="fw-bold"><i class="bi bi-file-text"></i> Termos de Uso</h2>
@@ -351,8 +366,8 @@
                 <strong>Razão Social:</strong> Angela Maria de Sousa Oliveira<br>
                 <strong>Situação Cadastral:</strong> Ativa desde 20/02/2020</p>
                 <div>
-                    <a href="#" class="me-2 politica-link"><i class="bi bi-shield-lock"></i> Privacidade</a>
-                    <a href="#" class="termos-link"><i class="bi bi-journal"></i> Termos</a>
+                    <a href="#" class="me-2" data-page="politica"><i class="bi bi-shield-lock"></i> Privacidade</a>
+                    <a href="#" data-page="termos"><i class="bi bi-journal"></i> Termos</a>
                 </div>
             </div>
         </div>
@@ -363,101 +378,212 @@
     </div>
 </footer>
 
-<!-- Bootstrap JS + lógica de navegação entre páginas virtuais -->
+<!-- Toast de feedback para copiar link -->
+<div id="toastMessage" class="toast-custom"></div>
+
+<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
 <script>
     (function() {
-        // Elementos das "páginas"
+        // Elementos das páginas
         const homeDiv = document.getElementById('homePage');
         const politicaDiv = document.getElementById('politicaPage');
         const termosDiv = document.getElementById('termosPage');
+        const pages = {
+            home: homeDiv,
+            politica: politicaDiv,
+            termos: termosDiv
+        };
         
-        // Links do menu e rodapé
-        const homeLinks = document.querySelectorAll('.nav-link[href="index.html"], .navbar-brand');
-        const politicaLinks = document.querySelectorAll('.nav-link[href="politica-privacidade.html"], .politica-link');
-        const termosLinks = document.querySelectorAll('.nav-link[href="termos-uso.html"], .termos-link');
+        // Função para atualizar a URL com o parâmetro ?page=
+        function updateURL(page) {
+            const url = new URL(window.location.href);
+            if (page === 'home') {
+                url.searchParams.delete('page');
+            } else {
+                url.searchParams.set('page', page);
+            }
+            window.history.pushState({ page: page }, '', url);
+        }
         
-        // Função para mostrar apenas uma seção
+        // Função para mostrar a página correta
         function showPage(pageId) {
-            homeDiv.style.display = 'none';
-            politicaDiv.style.display = 'none';
-            termosDiv.style.display = 'none';
-            if (pageId === 'home') homeDiv.style.display = 'block';
-            else if (pageId === 'politica') politicaDiv.style.display = 'block';
-            else if (pageId === 'termos') termosDiv.style.display = 'block';
+            // Esconder todas
+            Object.keys(pages).forEach(key => {
+                if (pages[key]) pages[key].style.display = 'none';
+            });
+            
+            // Mostrar a página solicitada
+            if (pages[pageId]) {
+                pages[pageId].style.display = 'block';
+            } else {
+                // Fallback para home
+                pages.home.style.display = 'block';
+                pageId = 'home';
+            }
             
             // Atualizar classe active no menu
             document.querySelectorAll('.nav-link').forEach(link => {
                 link.classList.remove('active');
+                const linkPage = link.getAttribute('data-page');
+                if (linkPage === pageId) {
+                    link.classList.add('active');
+                }
             });
+            
+            // Atualizar links do rodapé também
+            document.querySelectorAll('footer a[data-page]').forEach(link => {
+                const linkPage = link.getAttribute('data-page');
+                if (linkPage === pageId) {
+                    link.style.fontWeight = 'bold';
+                    link.style.textDecoration = 'underline';
+                } else {
+                    link.style.fontWeight = 'normal';
+                    link.style.textDecoration = 'none';
+                }
+            });
+            
+            // Atualizar título da página
             if (pageId === 'home') {
-                const homeNav = document.querySelector('.nav-link[href="index.html"]');
-                if (homeNav) homeNav.classList.add('active');
-                // alterar título
-                document.title = "Tapecaria Santa Angela | Home";
+                document.title = "Tapecaria Santa Angela | Tapeçaria e Estofados";
             } else if (pageId === 'politica') {
-                const polNav = document.querySelector('.nav-link[href="politica-privacidade.html"]');
-                if (polNav) polNav.classList.add('active');
                 document.title = "Política de Privacidade | Tapecaria Santa Angela";
             } else if (pageId === 'termos') {
-                const termNav = document.querySelector('.nav-link[href="termos-uso.html"]');
-                if (termNav) termNav.classList.add('active');
                 document.title = "Termos de Uso | Tapecaria Santa Angela";
+            }
+            
+            // Rolar para o topo
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        
+        // Função para navegar (atualiza URL e mostra página)
+        function navigateTo(pageId) {
+            showPage(pageId);
+            updateURL(pageId);
+        }
+        
+        // Capturar cliques em todos os elementos com data-page
+        function bindNavigation() {
+            // Links do menu
+            document.querySelectorAll('.nav-link[data-page]').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const page = link.getAttribute('data-page');
+                    navigateTo(page);
+                });
+            });
+            
+            // Links do rodapé
+            document.querySelectorAll('footer a[data-page]').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const page = link.getAttribute('data-page');
+                    navigateTo(page);
+                });
+            });
+            
+            // Logo / brand
+            const brand = document.querySelector('.navbar-brand');
+            if (brand) {
+                brand.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    navigateTo('home');
+                });
+            }
+            
+            // Botão de contato da home (scroll suave dentro da home)
+            const btnContato = document.querySelector('[data-scroll-to="contato"]');
+            if (btnContato) {
+                btnContato.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    // Se não estiver na home, navega para home primeiro
+                    const currentPage = getCurrentPageFromURL();
+                    if (currentPage !== 'home') {
+                        navigateTo('home');
+                        setTimeout(() => {
+                            const contatoSec = document.getElementById('contato');
+                            if (contatoSec) contatoSec.scrollIntoView({ behavior: 'smooth' });
+                        }, 300);
+                    } else {
+                        const contatoSec = document.getElementById('contato');
+                        if (contatoSec) contatoSec.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
             }
         }
         
-        // Event listeners para navegação
-        homeLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                showPage('home');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-        });
-        
-        politicaLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                showPage('politica');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-        });
-        
-        termosLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                showPage('termos');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-        });
-        
-        // Verificar hash inicial por segurança (caso alguém acesse com #termos)
-        if (window.location.hash === '#privacidade') showPage('politica');
-        else if (window.location.hash === '#termos') showPage('termos');
-        else showPage('home');
-        
-        // Adicionar também suporte para cliques no logo / brand
-        const brandLogo = document.querySelector('.navbar-brand');
-        if(brandLogo) {
-            brandLogo.addEventListener('click', (e) => {
-                e.preventDefault();
-                showPage('home');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
+        // Obter página atual da URL
+        function getCurrentPageFromURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const page = urlParams.get('page');
+            if (page && (page === 'politica' || page === 'termos')) {
+                return page;
+            }
+            return 'home';
         }
         
-        // Botão de contato do hero rola suave para a seção contato na home
-        const btnContato = document.querySelector('.btn-cta');
-        if(btnContato) {
-            btnContato.addEventListener('click', (e) => {
-                e.preventDefault();
-                showPage('home');
+        // Inicializar baseado na URL
+        function initFromURL() {
+            const page = getCurrentPageFromURL();
+            showPage(page);
+            updateURL(page); // Garante consistência
+        }
+        
+        // Lidar com navegação do browser (botão voltar/avançar)
+        window.addEventListener('popstate', (event) => {
+            const page = getCurrentPageFromURL();
+            showPage(page);
+        });
+        
+        // Opcional: mostrar toast com link atual quando clicar com botão direito ou para compartilhar?
+        // Adicionar um pequeno indicador ao clicar em qualquer link de navegação, mostrando a URL atual
+        function addLinkCopierHint() {
+            const toast = document.getElementById('toastMessage');
+            function showToast(message) {
+                toast.textContent = message;
+                toast.classList.add('show');
                 setTimeout(() => {
-                    const contatoSec = document.getElementById('contato');
-                    if(contatoSec) contatoSec.scrollIntoView({ behavior: 'smooth' });
-                }, 100);
+                    toast.classList.remove('show');
+                }, 2000);
+            }
+            
+            // Exibir a URL atual quando o usuário clicar em qualquer link de navegação (opcional)
+            // Isso é apenas um feedback extra para mostrar que o link mudou
+            document.querySelectorAll('a[data-page], .navbar-brand').forEach(link => {
+                link.addEventListener('click', () => {
+                    setTimeout(() => {
+                        const currentUrl = window.location.href;
+                        showToast(`🔗 Link atual: ${currentUrl}`);
+                    }, 100);
+                });
             });
         }
+        
+        // Inicialização
+        bindNavigation();
+        initFromURL();
+        addLinkCopierHint();
+        
+        // Exportar função para console (debug)
+        window.tapecariaAPI = {
+            getCurrentURL: () => window.location.href,
+            getPage: getCurrentPageFromURL,
+            navigate: navigateTo
+        };
+        
+        // Estilo extra para links ativos no rodapé
+        const style = document.createElement('style');
+        style.textContent = `
+            footer a[data-page] {
+                transition: all 0.2s;
+                cursor: pointer;
+            }
+            footer a[data-page]:hover {
+                color: #ffd6ae;
+            }
+        `;
+        document.head.appendChild(style);
     })();
 </script>
 </body>
