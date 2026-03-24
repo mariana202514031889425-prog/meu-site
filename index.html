@@ -3,701 +3,461 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Angela Maria de Sousa Oliveira | Conectividade e Soluções</title>
-    <!-- Bootstrap 5 + Icons + CSS Custom -->
+    <title>Tapecaria Santa Angela | Tapeçaria e Estofados</title>
+    <!-- Bootstrap 5 + Icons + CSS custom -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Google Fonts (opcional para elegância) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #2c3e50;
-            --primary-dark: #1a2632;
-            --secondary: #e67e22;
-            --accent: #f39c12;
-            --light-bg: #fef9e8;
-            --gray-bg: #f8f9fa;
-        }
-
         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
         }
-
         body {
-            font-family: 'Segoe UI', 'Roboto', system-ui, -apple-system, sans-serif;
-            color: #2c3e50;
-            background-color: #ffffff;
+            background-color: #fefaf5;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
-
-        /* Navbar Personalizada */
-        .navbar {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            padding: 0.8rem 0;
+        main {
+            flex: 1;
         }
-
+        /* navbar personalizada com tons terrosos */
         .navbar-brand {
             font-weight: 700;
-            font-size: 1.6rem;
-            letter-spacing: -0.3px;
+            letter-spacing: -0.5px;
+            color: #b45f2b !important;
         }
-
-        .navbar-brand span {
-            color: var(--secondary);
+        .navbar {
+            background-color: #fff6ed;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            border-bottom: 1px solid #f0e2d4;
         }
-
         .nav-link {
             font-weight: 500;
-            color: rgba(255,255,255,0.9) !important;
-            margin: 0 0.25rem;
-            transition: all 0.3s;
-            border-radius: 8px;
+            color: #5a3e2b !important;
+            transition: 0.2s;
         }
-
         .nav-link:hover, .nav-link.active {
-            color: var(--secondary) !important;
-            background: rgba(255,255,255,0.1);
-            transform: translateY(-2px);
+            color: #b45f2b !important;
+            background-color: #faeedf;
+            border-radius: 30px;
         }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #fef9e8 0%, #fff4e4 100%);
-            padding: 100px 0 70px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: 800;
-            color: var(--primary);
-            margin-bottom: 1.2rem;
-        }
-
-        .hero .highlight {
-            color: var(--secondary);
-            position: relative;
-            display: inline-block;
-        }
-
-        .btn-primary-custom {
-            background: var(--secondary);
-            border: none;
-            padding: 12px 32px;
-            font-weight: 600;
-            border-radius: 50px;
-            transition: all 0.3s;
-            color: white;
-        }
-
-        .btn-primary-custom:hover {
-            background: #d35400;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(230,126,34,0.3);
-        }
-
-        .btn-outline-custom {
-            border: 2px solid var(--secondary);
-            color: var(--secondary);
-            border-radius: 50px;
-            padding: 10px 28px;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-
-        .btn-outline-custom:hover {
-            background: var(--secondary);
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        /* Seções */
-        .section-title {
-            font-weight: 700;
-            font-size: 2.2rem;
-            color: var(--primary);
+        /* Hero / cabeçalho */
+        .hero-section {
+            background: linear-gradient(105deg, #f8ede3 0%, #faf0e8 100%);
+            border-radius: 0 0 2rem 2rem;
+            padding: 3rem 1rem;
             margin-bottom: 2rem;
-            position: relative;
-            display: inline-block;
         }
-
-        .section-title:after {
-            content: '';
-            position: absolute;
-            bottom: -12px;
-            left: 0;
-            width: 60px;
-            height: 4px;
-            background: var(--secondary);
-            border-radius: 4px;
+        .hero-title {
+            font-weight: 800;
+            color: #5c3a1f;
+            font-size: 2.6rem;
         }
-
-        /* Cards de Serviços */
-        .service-card {
+        .hero-sub {
+            color: #7b5a3e;
+            border-left: 4px solid #c27e44;
+            padding-left: 1rem;
+        }
+        .btn-cta {
+            background-color: #b45f2b;
+            border: none;
+            color: white;
+            font-weight: 600;
+            padding: 0.7rem 2rem;
+            border-radius: 40px;
+            transition: 0.2s;
+        }
+        .btn-cta:hover {
+            background-color: #8f4a1f;
+            color: white;
+            transform: translateY(-2px);
+        }
+        .card-service {
+            border: none;
+            border-radius: 28px;
             background: white;
-            border-radius: 20px;
-            padding: 2rem;
-            transition: all 0.3s;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            border: 1px solid #f0f0f0;
-            height: 100%;
+            transition: all 0.25s ease;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.02);
+            border: 1px solid #f1e4da;
         }
-
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            border-color: var(--secondary);
+        .card-service:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.1);
+            border-color: #e2cfbe;
         }
-
-        .service-card i {
-            font-size: 2.8rem;
-            color: var(--secondary);
-            margin-bottom: 1.2rem;
-        }
-
-        .service-card h4 {
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        /* Info Cards */
-        .info-card {
-            background: var(--light-bg);
-            border-radius: 20px;
-            padding: 1.5rem;
-            transition: 0.2s;
-            height: 100%;
-            border-left: 4px solid var(--secondary);
-        }
-
-        .info-card i {
-            font-size: 2rem;
-            color: var(--secondary);
-            margin-bottom: 1rem;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--primary-dark);
-            color: #ecf0f1;
-            margin-top: auto;
-        }
-
-        .footer-link {
-            color: #bdc3c7;
-            text-decoration: none;
-            transition: 0.2s;
-        }
-
-        .footer-link:hover {
-            color: var(--secondary);
-            text-decoration: underline;
-        }
-
-        .social-icon {
+        .icon-circle {
+            background-color: #f7ede5;
+            width: 70px;
+            height: 70px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 38px;
-            height: 38px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 50%;
-            margin-right: 10px;
-            transition: 0.3s;
-            color: white;
+            border-radius: 60px;
+            font-size: 2rem;
+            color: #b45f2b;
         }
-
-        .social-icon:hover {
-            background: var(--secondary);
-            transform: translateY(-3px);
-            color: white;
+        footer {
+            background-color: #2c241e;
+            color: #e2cfbe;
+            margin-top: 3rem;
+            padding: 2rem 0 1.5rem;
         }
-
-        /* Páginas de conteúdo (Política e Termos) */
-        .content-page {
-            padding: 100px 0 70px;
-            min-height: 70vh;
+        footer a {
+            color: #e6bc9a;
+            text-decoration: none;
         }
-
-        .content-card {
+        footer a:hover {
+            color: #ffd6ae;
+            text-decoration: underline;
+        }
+        .footer-divider {
+            border-color: #4e3a2c;
+        }
+        .info-card {
             background: white;
-            border-radius: 24px;
-            box-shadow: 0 10px 35px rgba(0,0,0,0.05);
-            padding: 2.5rem;
-            border: 1px solid #eef2f6;
+            border-radius: 1.5rem;
+            padding: 1.8rem;
+            height: 100%;
+            border: 1px solid #efe3d8;
+            transition: 0.2s;
         }
-
-        .content-card h2 {
-            color: var(--primary);
-            margin-top: 1.5rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
+        .info-card i {
+            font-size: 2.2rem;
+            color: #b45f2b;
         }
-
-        .content-card h3 {
-            color: var(--secondary);
-            margin-top: 1.2rem;
-            font-size: 1.4rem;
+        .page-header {
+            background: #f8ede3;
+            padding: 2rem 0;
+            border-radius: 0 0 1.5rem 1.5rem;
+            margin-bottom: 2rem;
         }
-
-        .content-card p, .content-card li {
-            line-height: 1.7;
-            color: #4a5568;
+        .legal-content {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+            border: 1px solid #f0e2d6;
         }
-
-        .back-home {
-            margin-top: 2rem;
-        }
-
         @media (max-width: 768px) {
-            .hero h1 {
+            .hero-title {
                 font-size: 2rem;
             }
-            .section-title {
-                font-size: 1.8rem;
-            }
-            .content-card {
-                padding: 1.5rem;
-            }
-        }
-
-        .btn-whatsapp-float {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            background: #25d366;
-            color: white;
-            border-radius: 50px;
-            padding: 12px 22px;
-            font-weight: 600;
-            z-index: 99;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-            transition: 0.2s;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .btn-whatsapp-float:hover {
-            background: #128C7E;
-            transform: scale(1.05);
-            color: white;
-        }
-
-        .cnpj-badge {
-            font-family: monospace;
-            background: #ecf0f1;
-            padding: 4px 12px;
-            border-radius: 30px;
-            font-size: 0.85rem;
         }
     </style>
 </head>
 <body>
 
-<!-- Navegação Principal -->
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+<!-- ========================= MENU SIMPLES + RODAPÉ DINÂMICO ========================= -->
+<nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
-        <a class="navbar-brand" href="index.html">Angela<span>Tech</span></a>
+        <a class="navbar-brand" href="index.html">
+            <i class="bi bi-scissors"></i> Tapecaria Santa Angela
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarMain">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="politica-privacidade.html">Política de Privacidade</a></li>
-                <li class="nav-item"><a class="nav-link" href="termos-uso.html">Termos de Uso</a></li>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html"><i class="bi bi-house-door"></i> Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="politica-privacidade.html"><i class="bi bi-shield-lock"></i> Política de Privacidade</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="termos-uso.html"><i class="bi bi-file-text"></i> Termos de Uso</a>
+                </li>
             </ul>
         </div>
     </div>
 </nav>
 
-<!-- PÁGINA HOME -->
-<div id="home-page">
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-7 mb-4 mb-lg-0">
-                    <h1>Conectando você ao futuro com <span class="highlight">segurança e qualidade</span></h1>
-                    <p class="lead mb-4">Soluções personalizadas em internet, suporte técnico e consultoria digital. Compromisso com a excelência e atendimento humanizado em Paracatu e região.</p>
-                    <div class="d-flex flex-wrap gap-3">
-                        <a href="https://wa.me/5538999252276?text=Olá%2C%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informações!" class="btn btn-primary-custom" target="_blank"><i class="fab fa-whatsapp me-2"></i>Fale Conosco</a>
-                        <a href="#servicos" class="btn btn-outline-custom">Nossos Serviços</a>
+<main>
+    <!-- =================== PÁGINA HOME =================== -->
+    <div id="homePage">
+        <!-- Hero / Apresentação -->
+        <div class="hero-section">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-7">
+                        <h1 class="hero-title">Tapecaria Santa Angela<br>Arte que reveste seu lar</h1>
+                        <p class="lead hero-sub mt-3">Especialistas em estofados, tapeçaria personalizada e restauração com acabamento impecável há mais de 5 anos.</p>
+                        <a href="#contato" class="btn btn-cta mt-3"><i class="bi bi-whatsapp"></i> Fale conosco</a>
                     </div>
-                    <div class="mt-4 d-flex flex-wrap gap-4">
-                        <div><i class="fas fa-check-circle text-secondary"></i> <strong>Atendimento Personalizado</strong></div>
-                        <div><i class="fas fa-check-circle text-secondary"></i> <strong>Suporte Ágil</strong></div>
-                        <div><i class="fas fa-check-circle text-secondary"></i> <strong>Tecnologia de Ponta</strong></div>
-                    </div>
-                </div>
-                <div class="col-lg-5 text-center">
-                    <i class="fas fa-network-wired fa-5x text-secondary opacity-75"></i>
-                    <i class="fas fa-shield-alt fa-4x d-block mt-3" style="color: #e67e22;"></i>
-                    <div class="mt-3 bg-white rounded-4 p-3 d-inline-block shadow-sm">
-                        <span class="fw-bold"><i class="fas fa-map-marker-alt me-1"></i> Paracatu - MG</span>
+                    <div class="col-lg-5 text-center">
+                        <i class="bi bi-couch" style="font-size: 8rem; color: #c27e44; opacity: 0.8;"></i>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Serviços / Diferenciais -->
-    <section id="servicos" class="py-5">
-        <div class="container py-4">
-            <div class="text-center mb-5">
-                <h2 class="section-title">Nossos Serviços</h2>
-                <p class="text-muted">Soluções completas para conectar sua casa ou empresa com excelência</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card text-center">
-                        <i class="fas fa-wifi"></i>
-                        <h4>Internet Fibra Óptica</h4>
-                        <p>Alta velocidade e estabilidade para você navegar, trabalhar e se divertir sem interrupções.</p>
+        <div class="container mb-5">
+            <!-- Frases e diferenciais -->
+            <div class="row text-center g-4 mb-5">
+                <div class="col-md-4">
+                    <div class="card-service p-4">
+                        <div class="icon-circle mb-3"><i class="bi bi-chat-heart"></i></div>
+                        <h5 class="fw-bold">Tradição e confiança</h5>
+                        <p class="text-secondary">Compromisso com qualidade e satisfação desde 2020. Cada peça tratada com exclusividade.</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card text-center">
-                        <i class="fas fa-headset"></i>
-                        <h4>Suporte Técnico</h4>
-                        <p>Atendimento especializado e rápido para resolver problemas de rede, equipamentos e configurações.</p>
+                <div class="col-md-4">
+                    <div class="card-service p-4">
+                        <div class="icon-circle mb-3"><i class="bi bi-brush"></i></div>
+                        <h5 class="fw-bold">Acabamento premium</h5>
+                        <p class="text-secondary">Tecidos selecionados, espumas de alta densidade e mão de obra especializada.</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card text-center">
-                        <i class="fas fa-chalkboard-user"></i>
-                        <h4>Consultoria Digital</h4>
-                        <p>Orientação para pequenos negócios e residências sobre melhor uso da tecnologia.</p>
+                <div class="col-md-4">
+                    <div class="card-service p-4">
+                        <div class="icon-circle mb-3"><i class="bi bi-truck"></i></div>
+                        <h5 class="fw-bold">Atendimento personalizado</h5>
+                        <p class="text-secondary">Orçamento sem compromisso e suporte para você renovar seus móveis.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Sobre e Dados da Empresa -->
-    <section class="py-5 bg-light">
-        <div class="container">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-6">
-                    <h2 class="section-title">Sobre nós</h2>
-                    <p class="lead">Compromisso, ética e inovação desde 2020.</p>
-                    <p>A <strong>Angela Maria de Sousa Oliveira</strong> atua no mercado de telecomunicações e serviços de internet, oferecendo conectividade de qualidade para residências e empresas em Paracatu/MG e região. Nossa missão é proporcionar a melhor experiência digital com atendimento próximo e soluções sob medida.</p>
-                    <div class="row mt-4">
-                        <div class="col-sm-6 mb-3">
-                            <div class="d-flex"><i class="fas fa-calendar-check fa-2x text-secondary me-3"></i><div><strong>Atuação desde 2020</strong><br>Mais de 5 anos de experiência</div></div>
-                        </div>
-                        <div class="col-sm-6 mb-3">
-                            <div class="d-flex"><i class="fas fa-handshake fa-2x text-secondary me-3"></i><div><strong>Compromisso</strong><br>Atendimento humanizado</div></div>
-                        </div>
+            <!-- Frase inspiracional -->
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <div class="p-4 bg-white rounded-4 shadow-sm" style="border-left: 6px solid #b45f2b;">
+                        <i class="bi bi-quote fs-1 text-secondary opacity-50"></i>
+                        <p class="fs-4 fst-italic text-dark-emphasis">"Revestir é transformar memórias, dar nova vida ao que você ama. Cada ponto feito com dedicação."</p>
+                        <p class="text-muted">— Angela Maria de Sousa Oliveira</p>
                     </div>
                 </div>
-                <div class="col-lg-6">
+            </div>
+
+            <!-- INFORMAÇÕES DA EMPRESA + CNPJ + ENDEREÇO (cards) -->
+            <div class="row g-4 mb-5" id="contato">
+                <div class="col-md-6">
                     <div class="info-card">
-                        <i class="fas fa-building"></i>
-                        <h5>Dados Institucionais</h5>
-                        <p><strong>Razão Social:</strong> Angela Maria de Sousa Oliveira<br>
-                        <strong>Nome Fantasia:</strong> AngelaTech Soluções em Internet<br>
-                        <strong>CNPJ:</strong> 36.445.173/0001-60<br>
-                        <strong>Data de Abertura / Situação Cadastral:</strong> 20/02/2020 (Ativa)<br>
-                        <strong>Endereço:</strong> Rua E 191, Primavera II, Paracatu - MG, CEP: 38600-970</p>
+                        <i class="bi bi-building"></i>
+                        <h4 class="mt-2 fw-semibold">Sobre nós</h4>
+                        <p><strong>Razão Social:</strong> Angela Maria de Sousa Oliveira</p>
+                        <p><strong>Nome Fantasia:</strong> Tapecaria Santa Angela</p>
+                        <p><strong>CNPJ:</strong> 36.445.173/0001-60 <span class="badge bg-light text-dark border">36445173000160</span></p>
+                        <p><strong>Situação Cadastral:</strong> Ativa <i class="bi bi-check-circle-fill text-success"></i> <br> <small>Data: 20/02/2020</small></p>
                         <hr>
-                        <div class="d-flex flex-wrap gap-2">
-                            <span class="badge bg-secondary bg-opacity-25 text-dark p-2"><i class="fas fa-check-circle text-success"></i> Regular</span>
-                            <span class="badge bg-secondary bg-opacity-25 text-dark p-2"><i class="fas fa-phone-alt"></i> (38) 99925-2276</span>
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <p class="mt-2"><strong>Endereço:</strong> Rua E, 191 - Primavera II, Paracatu - MG, CEP: 38600-970</p>
+                        <i class="bi bi-telephone-fill"></i> <strong>Telefone/WhatsApp:</strong> <a href="tel:+5538999252276" class="text-decoration-none">(38) 99925-2276</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="info-card">
+                        <i class="bi bi-star-fill"></i>
+                        <h4 class="mt-2 fw-semibold">Nossos serviços</h4>
+                        <ul class="list-unstyled">
+                            <li><i class="bi bi-check-lg text-success me-2"></i> Estofados residenciais e comerciais</li>
+                            <li><i class="bi bi-check-lg text-success me-2"></i> Tapeçaria automotiva (bancos e capas)</li>
+                            <li><i class="bi bi-check-lg text-success me-2"></i> Restauração de sofás e poltronas antigas</li>
+                            <li><i class="bi bi-check-lg text-success me-2"></i> Cortinas, almofadas e projetos sob medida</li>
+                            <li><i class="bi bi-check-lg text-success me-2"></i> Higienização e impermeabilização</li>
+                        </ul>
+                        <div class="alert alert-warning mt-3 p-2 text-center" role="alert">
+                            <i class="bi bi-clock-history"></i> Atendemos Paracatu e região com pontualidade.
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Contato / Localização -->
-    <section class="py-5">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-5">
-                    <h2 class="section-title">Entre em contato</h2>
-                    <p>Estamos prontos para atender você. Tire dúvidas, solicite suporte ou faça sua adesão aos nossos serviços.</p>
-                    <div class="mt-4">
-                        <div class="d-flex mb-3">
-                            <i class="fas fa-phone-alt fa-2x text-secondary me-3"></i>
-                            <div><strong>Telefone / WhatsApp</strong><br>(38) 99925-2276</div>
-                        </div>
-                        <div class="d-flex mb-3">
-                            <i class="fas fa-envelope fa-2x text-secondary me-3"></i>
-                            <div><strong>E-mail</strong><br>contato@angelatech.com.br</div>
-                        </div>
-                        <div class="d-flex mb-3">
-                            <i class="fas fa-map-marker-alt fa-2x text-secondary me-3"></i>
-                            <div><strong>Endereço</strong><br>Rua E 191, Primavera II, Paracatu - MG, CEP: 38600-970</div>
-                        </div>
-                    </div>
-                    <a href="https://wa.me/5538999252276?text=Olá%2C%20gostaria%20de%20informações%20sobre%20os%20serviços!" class="btn btn-primary-custom mt-3" target="_blank"><i class="fab fa-whatsapp me-2"></i>Chamar no WhatsApp</a>
-                </div>
-                <div class="col-lg-7">
-                    <div class="info-card bg-white">
-                        <h5><i class="fas fa-paper-plane me-2"></i>Envie uma mensagem rápida</h5>
-                        <form id="formContatoHome">
-                            <div class="row g-3 mt-2">
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Seu nome" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="tel" class="form-control" placeholder="(38) 9xxxx-xxxx" required>
-                                </div>
-                                <div class="col-12">
-                                    <input type="email" class="form-control" placeholder="Seu e-mail">
-                                </div>
-                                <div class="col-12">
-                                    <textarea class="form-control" rows="3" placeholder="Como podemos ajudar?"></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <button type="submit" class="btn btn-primary-custom px-4">Enviar mensagem <i class="fas fa-arrow-right ms-2"></i></button>
-                                </div>
-                            </div>
-                        </form>
-                        <small class="text-muted mt-3 d-block">Responderemos em até 24h úteis.</small>
+            <!-- Mapa ilustrativo / localização fake simples com ícone -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="bg-light rounded-4 p-4 text-center">
+                        <i class="bi bi-pin-map-fill fs-1" style="color:#b45f2b;"></i>
+                        <h5 class="mt-2">Venha nos visitar</h5>
+                        <p class="mb-0">Rua E, 191, Primavera II, Paracatu - MG. Próximo à praça central.</p>
+                        <a href="https://maps.google.com/?q=Rua+E+191+Paracatu+MG" target="_blank" class="btn btn-outline-secondary btn-sm mt-2 rounded-pill"><i class="bi bi-map"></i> Abrir no mapa</a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-</div>
+    </div>
 
-<!-- RODAPÉ (comum a todas as páginas) -->
+    <!-- =================== PÁGINA POLÍTICA DE PRIVACIDADE (conteúdo oculto via JS? mas farei inline via HTML puro - 3 páginas separadas? O pedido: 3 páginas: home, política e termos. Vamos construir um site com navegação em páginas distintas (cada arquivo). Porém como pediu "uma pagina só index", posso simular com hash ou usar divs? O ideal: criar um site de página única (SPA) com conteúdo trocado via JS? Mas a instrução é clara: "Criar 3 páginas: Home, Política de Privacidade e Termos de Uso." Então farei um sistema com três seções que aparecem conforme o clique, sem recarregar (single page application simples), mantendo todas as informações da empresa em cada visualização e rodapé fixo. Dessa forma é uma única página index.html mas com comportamento de 3 páginas. Atende perfeitamente.</p>
+    -->
+    <div id="politicaPage" style="display: none;">
+        <div class="page-header">
+            <div class="container">
+                <h2 class="fw-bold"><i class="bi bi-shield-lock"></i> Política de Privacidade</h2>
+                <p class="mb-0 text-secondary">A Tapecaria Santa Angela valoriza a transparência e a proteção dos seus dados.</p>
+            </div>
+        </div>
+        <div class="container mb-5">
+            <div class="legal-content">
+                <h4 class="fw-semibold">1. Coleta de informações</h4>
+                <p>Coletamos dados pessoais como nome, telefone, e-mail e endereço para orçamentos, atendimento e envio de produtos. Todas as informações são fornecidas voluntariamente pelo cliente.</p>
+                <h4 class="fw-semibold mt-4">2. Uso dos dados</h4>
+                <p>As informações são utilizadas exclusivamente para prestar serviços de tapeçaria, comunicação sobre pedidos e melhorias na experiência. Não compartilhamos dados com terceiros sem consentimento explícito.</p>
+                <h4 class="fw-semibold mt-4">3. Armazenamento e segurança</h4>
+                <p>Utilizamos práticas seguras para proteger suas informações contra acessos não autorizados. Seus dados ficam armazenados apenas pelo tempo necessário para cumprimento das obrigações legais.</p>
+                <h4 class="fw-semibold mt-4">4. Direitos do titular</h4>
+                <p>Você pode solicitar correção, exclusão ou portabilidade dos seus dados através do e-mail contato@tapecariasantaangela.com.br ou pelo telefone (38) 99925-2276.</p>
+                <p class="mt-4"><strong>Data de vigência:</strong> 20/02/2020 – atualização em 2025.</p>
+                <div class="alert alert-light mt-3 border"><i class="bi bi-info-circle"></i> Esta política está em conformidade com a LGPD.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =================== TERMOS DE USO =================== -->
+    <div id="termosPage" style="display: none;">
+        <div class="page-header">
+            <div class="container">
+                <h2 class="fw-bold"><i class="bi bi-file-text"></i> Termos de Uso</h2>
+                <p class="mb-0 text-secondary">Leia atentamente as condições para utilização dos nossos serviços e site.</p>
+            </div>
+        </div>
+        <div class="container mb-5">
+            <div class="legal-content">
+                <h4 class="fw-semibold">1. Aceitação dos termos</h4>
+                <p>Ao acessar o site da Tapecaria Santa Angela, você concorda com estes Termos de Uso. Reservamo-nos o direito de alterá-los a qualquer momento.</p>
+                <h4 class="fw-semibold mt-4">2. Serviços prestados</h4>
+                <p>Nossos serviços incluem estofados, tapeçaria e restauração. Os prazos e condições são informados no orçamento. Todo material utilizado é de alta qualidade e garantia sob defeitos de fabricação.</p>
+                <h4 class="fw-semibold mt-4">3. Orçamentos e pagamentos</h4>
+                <p>Os orçamentos têm validade de 15 dias. Aceitamos pagamentos via PIX, cartão de débito/crédito e dinheiro. Condições especiais podem ser negociadas presencialmente.</p>
+                <h4 class="fw-semibold mt-4">4. Propriedade intelectual</h4>
+                <p>Todo conteúdo do site (textos, logotipo, imagens) pertence à Tapecaria Santa Angela. É proibida a reprodução não autorizada.</p>
+                <h4 class="fw-semibold mt-4">5. Limitação de responsabilidade</h4>
+                <p>Não nos responsabilizamos por danos indiretos decorrentes de uso inadequado das informações. Em caso de dúvidas, entre em contato pelo nosso canal oficial.</p>
+                <p class="mt-4"><strong>CNPJ:</strong> 36.445.173/0001-60 – <strong>Responsável:</strong> Angela Maria de Sousa Oliveira</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Rodapé com todos os dados da empresa -->
 <footer>
-    <div class="container pt-4 pb-3">
+    <div class="container">
         <div class="row gy-4">
+            <div class="col-md-5">
+                <h5 class="fw-bold"><i class="bi bi-scissors"></i> Tapecaria Santa Angela</h5>
+                <p>Transformando móveis com arte e tradição. Atendimento acolhedor e serviços de alta qualidade em Paracatu e região.</p>
+                <p><i class="bi bi-c-circle"></i> 2025 - Todos os direitos reservados.</p>
+            </div>
             <div class="col-md-4">
-                <h5 class="fw-bold text-white">Angela<span style="color:#e67e22;">Tech</span></h5>
-                <p class="small">Soluções em internet e tecnologia com atendimento humanizado e compromisso com a qualidade.</p>
+                <h6><i class="bi bi-pin-map-fill"></i> Endereço</h6>
+                <p class="mb-1">Rua E, 191 - Primavera II<br>Paracatu - MG, CEP 38600-970</p>
+                <h6 class="mt-3"><i class="bi bi-telephone"></i> Contato</h6>
+                <p><a href="tel:+5538999252276">(38) 99925-2276</a> (WhatsApp / ligações)</p>
+            </div>
+            <div class="col-md-3">
+                <h6><i class="bi bi-file-earmark-text"></i> Documentos</h6>
+                <p><strong>CNPJ:</strong> 36.445.173/0001-60<br>
+                <strong>Razão Social:</strong> Angela Maria de Sousa Oliveira<br>
+                <strong>Situação Cadastral:</strong> Ativa desde 20/02/2020</p>
                 <div>
-                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="me-2 politica-link"><i class="bi bi-shield-lock"></i> Privacidade</a>
+                    <a href="#" class="termos-link"><i class="bi bi-journal"></i> Termos</a>
                 </div>
             </div>
-            <div class="col-md-4">
-                <h6 class="fw-bold">Links Rápidos</h6>
-                <ul class="list-unstyled">
-                    <li><a href="index.html" class="footer-link">Home</a></li>
-                    <li><a href="politica-privacidade.html" class="footer-link">Política de Privacidade</a></li>
-                    <li><a href="termos-uso.html" class="footer-link">Termos de Uso</a></li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <h6 class="fw-bold">Contato</h6>
-                <p class="small mb-1"><i class="fas fa-phone me-2"></i> (38) 99925-2276</p>
-                <p class="small mb-1"><i class="fas fa-map-marker-alt me-2"></i> Rua E 191, Primavera II - Paracatu/MG</p>
-                <p class="small"><i class="fas fa-id-card me-2"></i> CNPJ: 36.445.173/0001-60</p>
-                <small class="text-muted">Situação Cadastral: 20/02/2020 (Ativa)</small>
-            </div>
         </div>
-        <hr class="mt-3 bg-secondary">
-        <div class="text-center small py-2">
-            &copy; 2025 Angela Maria de Sousa Oliveira - Todos os direitos reservados. | Desenvolvido para conectar pessoas.
+        <hr class="footer-divider mt-3">
+        <div class="text-center small">
+            <i class="bi bi-envelope"></i> contato@tapecariasantaangela.com.br (e-mail institucional) | <i class="bi bi-clock"></i> Segunda a Sexta: 8h às 18h | Sábado: 8h às 12h
         </div>
     </div>
 </footer>
 
-<!-- Botão WhatsApp flutuante -->
-<a href="https://wa.me/5538999252276?text=Olá%2C%20vim%20pelo%20site%20e%20gostaria%20de%20informações!" class="btn-whatsapp-float" target="_blank">
-    <i class="fab fa-whatsapp fa-lg"></i> Fale conosco
-</a>
-
+<!-- Bootstrap JS + lógica de navegação entre páginas virtuais -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-    // Simples envio de formulário
-    const formHome = document.getElementById('formContatoHome');
-    if(formHome) {
-        formHome.addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
-            formHome.reset();
-        });
-    }
-
-    // Ativar link ativo no menu baseado na página atual
-    const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-    navLinks.forEach(link => {
-        const href = link.getAttribute('href');
-        if(href === 'index.html' && (currentPath === '/' || currentPath.endsWith('index.html') || currentPath === '' || currentPath.endsWith('/'))) {
-            link.classList.add('active');
-        } else if(href && currentPath.includes(href)) {
-            link.classList.add('active');
-        }
-    });
-</script>
-
-<!-- PÁGINA POLÍTICA DE PRIVACIDADE (conteúdo separado mas no mesmo arquivo para demonstrar 3 páginas, iremos usar condição de exibição via JS, mas por boas práticas crio estrutura de 3 arquivos virtuais, mas neste código único simulamos via sections? Porém para garantir entrega correta: vou incluir código condicional de rota usando hash? Melhor gerar 3 páginas distintas: farei seções ocultas? Não, o ideal é entregar 3 páginas separadas. Como a plataforma exige um único código HTML, vou gerar um sistema de rotas simples com hash ou query string, mas para atender pedido "criar 3 páginas: Home, Política e Termos" de forma clara, vou adicionar um sistema de navegação SPA leve, mostrando o conteúdo correto com base no parâmetro ?page. Isso garante visualização das 3 páginas em um só arquivo, mantendo estrutura completa. -->
-
-<!-- SISTEMA DE ROTEAMENTO PARA 3 PÁGINAS (Home, Política, Termos) -->
-<script>
     (function() {
-        // Função para mostrar a página correta
-        function showPage(page) {
-            const homeDiv = document.getElementById('home-page');
-            const politicaDiv = document.getElementById('politica-page');
-            const termosDiv = document.getElementById('termos-page');
-            
-            if(!homeDiv || !politicaDiv || !termosDiv) return;
-            
+        // Elementos das "páginas"
+        const homeDiv = document.getElementById('homePage');
+        const politicaDiv = document.getElementById('politicaPage');
+        const termosDiv = document.getElementById('termosPage');
+        
+        // Links do menu e rodapé
+        const homeLinks = document.querySelectorAll('.nav-link[href="index.html"], .navbar-brand');
+        const politicaLinks = document.querySelectorAll('.nav-link[href="politica-privacidade.html"], .politica-link');
+        const termosLinks = document.querySelectorAll('.nav-link[href="termos-uso.html"], .termos-link');
+        
+        // Função para mostrar apenas uma seção
+        function showPage(pageId) {
             homeDiv.style.display = 'none';
             politicaDiv.style.display = 'none';
             termosDiv.style.display = 'none';
+            if (pageId === 'home') homeDiv.style.display = 'block';
+            else if (pageId === 'politica') politicaDiv.style.display = 'block';
+            else if (pageId === 'termos') termosDiv.style.display = 'block';
             
-            if(page === 'politica') {
-                politicaDiv.style.display = 'block';
-                document.title = 'Política de Privacidade | AngelaTech';
-            } else if(page === 'termos') {
-                termosDiv.style.display = 'block';
-                document.title = 'Termos de Uso | AngelaTech';
-            } else {
-                homeDiv.style.display = 'block';
-                document.title = 'AngelaTech | Conectividade e Soluções';
-            }
-            
-            // Atualizar links ativos do menu
-            const navs = document.querySelectorAll('.navbar-nav .nav-link');
-            navs.forEach(link => {
+            // Atualizar classe active no menu
+            document.querySelectorAll('.nav-link').forEach(link => {
                 link.classList.remove('active');
-                const href = link.getAttribute('href');
-                if(page === 'home' && (href === 'index.html' || href === '#' || href === 'index.html?page=home')) {
-                    link.classList.add('active');
-                } else if(page === 'politica' && href && href.includes('politica')) {
-                    link.classList.add('active');
-                } else if(page === 'termos' && href && href.includes('termos')) {
-                    link.classList.add('active');
-                }
             });
-        }
-        
-        // Detectar parâmetro na URL
-        function getPageFromUrl() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const page = urlParams.get('page');
-            if(page === 'politica') return 'politica';
-            if(page === 'termos') return 'termos';
-            return 'home';
-        }
-        
-        // Modificar links para manter roteamento
-        function setupLinks() {
-            const links = document.querySelectorAll('.navbar-nav .nav-link, .footer-link');
-            links.forEach(link => {
-                const originalHref = link.getAttribute('href');
-                if(originalHref && (originalHref.includes('politica') || originalHref.includes('termos') || originalHref === 'index.html')) {
-                    link.addEventListener('click', function(e) {
-                        e.preventDefault();
-                        let page = 'home';
-                        if(originalHref.includes('politica')) page = 'politica';
-                        else if(originalHref.includes('termos')) page = 'termos';
-                        window.history.pushState({}, '', `?page=${page}`);
-                        showPage(page);
-                    });
-                }
-            });
-        }
-        
-        // Aguardar carregamento do DOM
-        window.addEventListener('DOMContentLoaded', function() {
-            // Criar as divs de política e termos se não existirem
-            if(!document.getElementById('politica-page')) {
-                const politicaHtml = `<!-- PÁGINA POLÍTICA DE PRIVACIDADE -->
-                <div id="politica-page" style="display:none;">
-                    <section class="content-page">
-                        <div class="container">
-                            <div class="content-card">
-                                <h1 class="mb-4" style="color:#2c3e50;"><i class="fas fa-shield-alt me-2" style="color:#e67e22;"></i>Política de Privacidade</h1>
-                                <p><strong>Última atualização:</strong> 24 de março de 2025</p>
-                                <p>A <strong>Angela Maria de Sousa Oliveira</strong>, pessoa jurídica de direito privado, inscrita no CNPJ sob o nº 36.445.173/0001-60, localizada na Rua E 191, Primavera II, Paracatu/MG, CEP 38600-970, valoriza a privacidade e a proteção dos dados pessoais de seus clientes, visitantes e usuários.</p>
-                                
-                                <h2>1. Coleta de Informações</h2>
-                                <p>Coletamos dados pessoais como nome, e-mail, telefone e endereço para fins de cadastro, prestação de serviços de internet, suporte técnico e comunicações relacionadas. Também podem ser coletados dados de navegação para melhorar a experiência no site.</p>
-                                
-                                <h2>2. Uso das Informações</h2>
-                                <p>Os dados são utilizados para: (i) execução de serviços contratados; (ii) atendimento de solicitações; (iii) envio de informações sobre planos e atualizações; (iv) cumprimento de obrigações legais.</p>
-                                
-                                <h2>3. Compartilhamento de Dados</h2>
-                                <p>Não compartilhamos seus dados pessoais com terceiros, exceto quando necessário para a prestação dos serviços (parceiros técnicos) ou por determinação legal.</p>
-                                
-                                <h2>4. Segurança</h2>
-                                <p>Adotamos medidas técnicas e organizacionais para proteger os dados contra acessos não autorizados, perdas ou violações.</p>
-                                
-                                <h2>5. Seus Direitos</h2>
-                                <p>Você pode solicitar a correção, exclusão ou portabilidade dos seus dados entrando em contato pelo e-mail contato@angelatech.com.br ou telefone (38) 99925-2276.</p>
-                                
-                                <h2>6. Cookies</h2>
-                                <p>Este site utiliza cookies para melhorar a navegação e coletar estatísticas anônimas. Você pode configurar seu navegador para recusá-los.</p>
-                                
-                                <div class="back-home mt-4">
-                                    <a href="?page=home" class="btn btn-outline-custom"><i class="fas fa-arrow-left me-2"></i>Voltar para Home</a>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>`;
-                document.body.insertAdjacentHTML('beforeend', politicaHtml);
+            if (pageId === 'home') {
+                const homeNav = document.querySelector('.nav-link[href="index.html"]');
+                if (homeNav) homeNav.classList.add('active');
+                // alterar título
+                document.title = "Tapecaria Santa Angela | Home";
+            } else if (pageId === 'politica') {
+                const polNav = document.querySelector('.nav-link[href="politica-privacidade.html"]');
+                if (polNav) polNav.classList.add('active');
+                document.title = "Política de Privacidade | Tapecaria Santa Angela";
+            } else if (pageId === 'termos') {
+                const termNav = document.querySelector('.nav-link[href="termos-uso.html"]');
+                if (termNav) termNav.classList.add('active');
+                document.title = "Termos de Uso | Tapecaria Santa Angela";
             }
-            
-            if(!document.getElementById('termos-page')) {
-                const termosHtml = `<!-- PÁGINA TERMOS DE USO -->
-                <div id="termos-page" style="display:none;">
-                    <section class="content-page">
-                        <div class="container">
-                            <div class="content-card">
-                                <h1 class="mb-4" style="color:#2c3e50;"><i class="fas fa-file-contract me-2" style="color:#e67e22;"></i>Termos de Uso</h1>
-                                <p><strong>Última atualização:</strong> 24 de março de 2025</p>
-                                <p>Estes Termos de Uso regulamentam o acesso e a utilização do site e serviços oferecidos por <strong>Angela Maria de Sousa Oliveira</strong> (CNPJ: 36.445.173/0001-60).</p>
-                                
-                                <h2>1. Aceitação dos Termos</h2>
-                                <p>Ao acessar nosso site e contratar nossos serviços, você declara estar ciente e de acordo com todas as condições aqui estabelecidas.</p>
-                                
-                                <h2>2. Serviços Prestados</h2>
-                                <p>Oferecemos serviços de provedor de internet, suporte técnico e consultoria digital. As condições específicas de cada plano são detalhadas no momento da contratação.</p>
-                                
-                                <h2>3. Responsabilidades do Usuário</h2>
-                                <p>O usuário compromete-se a utilizar os serviços de forma ética e legal, respeitando as leis brasileiras. É proibido o uso para atividades ilícitas ou que violem direitos de terceiros.</p>
-                                
-                                <h2>4. Cancelamento e Rescisão</h2>
-                                <p>O cliente pode solicitar o cancelamento dos serviços a qualquer momento, mediante comunicação formal. Aplica-se as regras de fidelidade e multas conforme contrato vigente.</p>
-                                
-                                <h2>5. Limitação de Responsabilidade</h2>
-                                <p>Não nos responsabilizamos por danos indiretos decorrentes de uso inadequado dos serviços ou eventos de força maior (interrupções externas, fenômenos naturais).</p>
-                                
-                                <h2>6. Alterações nos Termos</h2>
-                                <p>Reservamo-nos o direito de modificar estes Termos a qualquer momento. As alterações serão publicadas neste site e entrarão em vigor na data indicada.</p>
-                                
-                                <h2>7. Foro</h2>
-                                <p>Fica eleito o foro da comarca de Paracatu - MG para dirimir quaisquer controvérsias oriundas destes Termos.</p>
-                                
-                                <div class="back-home mt-4">
-                                    <a href="?page=home" class="btn btn-outline-custom"><i class="fas fa-arrow-left me-2"></i>Voltar para Home</a>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>`;
-                document.body.insertAdjacentHTML('beforeend', termosHtml);
-            }
-            
-            const page = getPageFromUrl();
-            showPage(page);
-            setupLinks();
-            
-            // Lidar com botão voltar/avançar do navegador
-            window.addEventListener('popstate', function() {
-                const newPage = getPageFromUrl();
-                showPage(newPage);
+        }
+        
+        // Event listeners para navegação
+        homeLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                showPage('home');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             });
         });
+        
+        politicaLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                showPage('politica');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+        
+        termosLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                showPage('termos');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+        
+        // Verificar hash inicial por segurança (caso alguém acesse com #termos)
+        if (window.location.hash === '#privacidade') showPage('politica');
+        else if (window.location.hash === '#termos') showPage('termos');
+        else showPage('home');
+        
+        // Adicionar também suporte para cliques no logo / brand
+        const brandLogo = document.querySelector('.navbar-brand');
+        if(brandLogo) {
+            brandLogo.addEventListener('click', (e) => {
+                e.preventDefault();
+                showPage('home');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+        
+        // Botão de contato do hero rola suave para a seção contato na home
+        const btnContato = document.querySelector('.btn-cta');
+        if(btnContato) {
+            btnContato.addEventListener('click', (e) => {
+                e.preventDefault();
+                showPage('home');
+                setTimeout(() => {
+                    const contatoSec = document.getElementById('contato');
+                    if(contatoSec) contatoSec.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+            });
+        }
     })();
 </script>
 </body>
